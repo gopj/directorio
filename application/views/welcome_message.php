@@ -67,7 +67,7 @@
 <body>
 
 <div id="container">
-		<p>Estos son los jodidos mensajeros.....</p>
+		<p>Bienvenido desgraciado....</p>
 	</div>
 
 	<p class="footer">Page rendered in <strong>{elapsed_time}</strong> seconds</p>
