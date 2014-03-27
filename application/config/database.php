@@ -48,7 +48,7 @@
 $active_group = 'default';
 $active_record = TRUE;
 
-$db['default']['hostname'] = 'http;//kidztartdev.com.mx';
+$db['default']['hostname'] = 'http://kidztartdev.com.mx';
 $db['default']['username'] = 'kidztart_dirUsr';
 $db['default']['password'] = 'K1d5t4rt#';
 $db['default']['database'] = 'kidztart_directorio';
