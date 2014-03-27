@@ -70,11 +70,9 @@
 	<h1>Mensajes</h1>
 
 	<div id="body">
-		<p>Lista de mensajitos bonitos....</p>
+		<p>Lista de mensajitos bonitos</p>
  		<a href="user_guide/">User Guide</a>.</p>
 	</div>
-
-	<p class="footer">Page rendered in <strong>{elapsed_time}</strong> seconds</p>
 </div>
 
 </body>
