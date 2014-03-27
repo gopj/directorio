@@ -48,11 +48,11 @@
 $active_group = 'default';
 $active_record = TRUE;
 
-$db['default']['hostname'] = 'localhost';
-$db['default']['username'] = '';
-$db['default']['password'] = '';
-$db['default']['database'] = '';
-$db['default']['dbdriver'] = 'mysql';
+$db['default']['hostname'] = 'http;//kidztartdev.com.mx';
+$db['default']['username'] = 'kidztart_dirUsr';
+$db['default']['password'] = 'K1d5t4rt#';
+$db['default']['database'] = 'kidztart_directorio';
+$db['default']['dbdriver'] = 'mysqli';
 $db['default']['dbprefix'] = '';
 $db['default']['pconnect'] = TRUE;
 $db['default']['db_debug'] = TRUE;
