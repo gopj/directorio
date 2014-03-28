@@ -5,11 +5,11 @@
     <div id="sidebar-wrapper">
         <ul class="sidebar-nav">
             <!--<a id="menu-close" href="#" class="btn btn-default btn-lg pull-left toggle"><i class="fa fa-times"></i></a>-->
-            <li class="sidebar-brand" ><a id="menu-close" href="#">Esconder -></a>
+            <li class="sidebar-brand" ><a id="menu-close" href="#">Cerrar [x]</a>
             </li>
             <li><a href="#top">CONOCENOS</a>
             </li>
-            <li><a href="#about">ACERCA DE NOSOSTROS</a>
+            <li><a href="#about">ACERCA DE NOSOTROS</a>
             </li>
             <li><a href="#services">EVENTOS</a>
             </li>
@@ -29,12 +29,12 @@
             <h1>Encuéntralo todo!</h1>
             <h3>
         <form class="navbar-form navbar-center" role="search">
-          <div class="input-group form-group col-lg-4">
-            <input type="text" class="form-control"  style="width: 340px;" placeholder="Encuentra los mejores Lugares">
-             <span class="input-group-btn">
-		        <button class="btn btn-default btn-info" type="button">Buscar!</button>
-		      </span>
+          <center><div class="form-group">
+            <input type="text" class="form-control"  style="width: 360px;" placeholder="Encuentra los mejores Lugares">
           </div>
+          <div class="form-group">
+           		<button class="btn btn-default btn-info btn-lg" type="button">Buscar!</button>
+           </div></center>
         </from>
         </div>
     </div>
