@@ -10,6 +10,10 @@
         margin: 0px;
         padding: 0px
       }
+      .back-leyend{
+      	width:100%;
+      	border-bottom:1px solid gray;
+      }
     </style>
     
 </html>

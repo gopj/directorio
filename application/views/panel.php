@@ -34,11 +34,11 @@
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-            <li class=""><a href="#">Inicio</a></li>
-            <li class="dropdown active">
+            <li class="active"><a href="#">Inicio</a></li>
+            <li class="dropdown ">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">Categorías <b class="caret"></b></a>
               <ul class="dropdown-menu">
-                <li class="active"><a href="#">Lista</a></li>
+                <li class=""><a href="#">Lista</a></li>
                 <li><a href="#">Agregar</a></li>
               </ul>
             </li>
@@ -65,33 +65,51 @@
 
       <!-- Main jumbotron for a primary marketing message or call to action -->
       <div class="jumbotron">
-        <h1>Administración de categorías!</h1>
-        <p>Aquí se podrán administrar las categorías.</p>
+        <h1>Panel de administración!</h1>
+        <p>Panel para administrar el sistema.</p>
       </div>
-	<a href="#" class="btn btn-lg btn-info"><span class="glyphicon glyphicon-plus-sign"> </span> Agregar</a>
 	<br/>
-	<br/>
-	<table class="table table-bordered">
-		<thead>
-			<tr><th>Nombre</th><th>Descripción</th><th>Acciones</th></tr>
-		</thead>
-		<tbody>
-			<?php
-				foreach($query as $row){
-					echo "<tr><td>".$row->nombre."</td><td>".$row->descripcion."</td><td></td></tr>";
-				}
-			?>
-		</tbody>
-		<tfoot>
-			<tr><td>Nombre</td><td>Descripción</td><td>Acciones</td></tr>
-		</tfoot>
-	</table>
+	
+	   <div class="page-header">
+        <h1>Secciones</h1>
+      </div>
+      <div class="row">
+        <div class="col-sm-4">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title">Categorias</h3>
+            </div>
+            <div class="panel-body">
+             	Panel de administración de categorías.
+             	<a href ="/categories/" class="btn btn-default"><span class="glyphicon glyphicon-info-sign"> </span> Panel</a>
+            </div>
+          </div>
+        </div><!-- /.col-sm-4 -->
+        <div class="col-sm-4">
+          <div class="panel panel-success">
+            <div class="panel-heading">
+              <h3 class="panel-title">Negocios</h3>
+            </div>
+            <div class="panel-body">
+              Panel de administración de negocios.
+              <a href ="/companies/" class="btn btn-success"><span class="glyphicon glyphicon-info-sign"> </span> Panel</a>
+            </div>
+          </div>
+        </div><!-- /.col-sm-4 -->
+        <div class="col-sm-4">
+          <div class="panel panel-warning">
+            <div class="panel-heading">
+              <h3 class="panel-title">Usuarios</h3>
+            </div>
+            <div class="panel-body">
+              Panel de administración de usuarios.
+              <a href ="/users/" class="btn btn-warning"><span class="glyphicon glyphicon-info-sign"> </span> Panel</a>
+            </div>
+          </div>
+        </div><!-- /.col-sm-4 -->
+      </div>
 
-	   <div class="back-leyend">
-	        <a href="/panel/"><span class="glyphicon glyphicon-chevron-left"> </span> Regresar</a>
-       </div>
-       <center><span class="copy">&copy; Copyright 2014. Powered by: <strong>KidztartDev</strong></span></center>
-      
+
     </div> <!-- /container -->
 
   </body>
