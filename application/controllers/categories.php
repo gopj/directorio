@@ -11,18 +11,17 @@ class Categories extends CI_Controller {
 	
 	public function index($usuario="")
 	{
-		if($usuario=="")
-			$data["usr"] = $this->usr;
-		else
-			$data["usr"] = $usuario;
-		
+		$this->load->model("categories_model");
+		$data["query"]=$this->categories_model->get_categories();
 		$this->load->view('categories/index.php',$data);
+		$this->load->view("cssjs");
 	}
 	
 	public function get_Categories(){
 		$this->load->model("categories_model");
 		$data["query"]=$this->categories_model->get_categories();
 		$this->load->view("categories/categories_list",$data);
+		$this->load->view("cssjs");
 	}
 }
 ?>
