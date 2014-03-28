@@ -38,7 +38,7 @@
             <li class="dropdown active">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">Categorías <b class="caret"></b></a>
               <ul class="dropdown-menu">
-                <li class="active"><a href="#">Lista</a></li>
+                <li class="active"><a href="/categories/">Lista</a></li>
                 <li><a href="#">Agregar</a></li>
               </ul>
             </li>
@@ -68,22 +68,24 @@
         <h1>Administración de categorías!</h1>
         <p>Aquí se podrán administrar las categorías.</p>
       </div>
-	<a href="#" class="btn btn-lg btn-info"><span class="glyphicon glyphicon-plus-sign"> </span> Agregar</a>
+	<button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#addCategorie">
+		<span class="glyphicon glyphicon-plus-sign"> </span> Agregar
+	</button>
 	<br/>
 	<br/>
 	<table class="table table-bordered">
 		<thead>
-			<tr><th>Nombre</th><th>Descripción</th><th>Acciones</th></tr>
+			<tr><th>Nombre</th><th>Descripción</th><th>Editar</th><th>Eliminar</th></tr>
 		</thead>
 		<tbody>
 			<?php
 				foreach($query as $row){
-					echo "<tr><td>".$row->nombre."</td><td>".$row->descripcion."</td><td></td></tr>";
+					echo "<tr><td>".$row->nombre."</td><td>".$row->descripcion."</td><td><a href='editar/' class='btn btn-warning'>Editar</a></td><td><a href='eliminar/' class='btn btn-danger'>Eliminar</a></td></tr>";
 				}
 			?>
 		</tbody>
 		<tfoot>
-			<tr><td>Nombre</td><td>Descripción</td><td>Acciones</td></tr>
+			<tr><td>Nombre</td><td>Descripción</td><td>Editar</td><td>Eliminar</td></tr>
 		</tfoot>
 	</table>
 
@@ -95,3 +97,30 @@
     </div> <!-- /container -->
 
   </body>
+  
+  
+  <!-- Modal para agregar categorías -->
+<div class="modal fade" id="addCategorie" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+    	 <form class="form-horizontal" method="post" name="" id="">
+      		<div class="modal-header">
+      			  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+			      <h4 class="modal-title" id="myModalLabel">Agregar categoría</h4>
+		     </div>
+		      <div class="modal-body">
+        			<div class="form-group">
+        				<label for="nombre" class="col-sm-2 control-label">Nombre</label>
+        				<div class="col-sm-6">
+	        				<input type="text" id="nombre" class="form-control" name="nombre" placeholder="Escribe el nombre" required="required"/>
+	        			</div>
+    	    		</div>
+		      </div>
+		      <div class="modal-footer">
+			        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+			        <button type="submit" class="btn btn-primary">Guardar</button>
+		      </div>
+	      </form>
+    </div>
+  </div>
+</div>

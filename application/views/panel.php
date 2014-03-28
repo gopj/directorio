@@ -38,7 +38,7 @@
             <li class="dropdown ">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">Categorías <b class="caret"></b></a>
               <ul class="dropdown-menu">
-                <li class=""><a href="#">Lista</a></li>
+                <li class=""><a href="/categories/">Lista</a></li>
                 <li><a href="#">Agregar</a></li>
               </ul>
             </li>
