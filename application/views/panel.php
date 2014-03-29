@@ -9,7 +9,7 @@
     <meta name="author" content="">
     <link rel="shortcut icon" href="../../assets/ico/favicon.ico">
 
-    <title>Administración de categorías</title>
+    <title>Panel de control</title>
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -77,11 +77,20 @@
         <div class="col-sm-4">
           <div class="panel panel-default">
             <div class="panel-heading">
-              <h3 class="panel-title">Categorias</h3>
+              <h3 class="panel-title">Categorías</h3>
             </div>
             <div class="panel-body">
              	Panel de administración de categorías.
              	<a href ="/categories/" class="btn btn-default"><span class="glyphicon glyphicon-info-sign"> </span> Panel</a>
+            </div>
+          </div>
+          <div class="panel panel-info">
+            <div class="panel-heading">
+              <h3 class="panel-title">Estadísticas</h3>
+            </div>
+            <div class="panel-body">
+             	Gráficos del sistema.
+             	<a href ="/categories/" class="btn btn-info"><span class="glyphicon glyphicon-info-sign"> </span> Estadisticas</a>
             </div>
           </div>
         </div><!-- /.col-sm-4 -->
@@ -95,6 +104,15 @@
               <a href ="/companies/" class="btn btn-success"><span class="glyphicon glyphicon-info-sign"> </span> Panel</a>
             </div>
           </div>
+          <div class="panel panel-danger">
+            <div class="panel-heading">
+              <h3 class="panel-title">Administradores</h3>
+            </div>
+            <div class="panel-body">
+             	Usuarios administradores.
+             	<a href ="/categories/" class="btn btn-danger"><span class="glyphicon glyphicon-info-sign"> </span> Panel</a>
+            </div>
+          </div>
         </div><!-- /.col-sm-4 -->
         <div class="col-sm-4">
           <div class="panel panel-warning">
@@ -104,6 +122,15 @@
             <div class="panel-body">
               Panel de administración de usuarios.
               <a href ="/users/" class="btn btn-warning"><span class="glyphicon glyphicon-info-sign"> </span> Panel</a>
+            </div>
+          </div>
+          <div class="panel panel-primary">
+            <div class="panel-heading">
+              <h3 class="panel-title">Sugerencias</h3>
+            </div>
+            <div class="panel-body">
+             	Buzón de sugerencias.
+             	<a href ="/categories/" class="btn btn-primary"><span class="glyphicon glyphicon-info-sign"> </span> Buzón</a>
             </div>
           </div>
         </div><!-- /.col-sm-4 -->

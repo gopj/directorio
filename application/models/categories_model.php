@@ -15,5 +15,15 @@ class Categories_model extends CI_Model {
 		$query= $this->db->get("categorias");
 		return $query->result();
 	}
+	
+	function get_count_categories(){
+		return $this->db->count_all('categorias');
+	}
+	
+	function insert_categories(){
+		$data = array('nombre' => $this->input->post("nombre"),'descripcion' => $this->input->post("descripcion"));
+		$this->db->insert('categorias', $data); 	
+		return $this->db->affected_rows();
+	}
 }
 ?>

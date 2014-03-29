@@ -9,10 +9,11 @@ class Categories extends CI_Controller {
 		$this->usr ="Administrador";
 	}
 	
-	public function index($usuario="")
+	public function index()
 	{
 		$this->load->model("categories_model");
 		$data["query"]=$this->categories_model->get_categories();
+		$data["nRows"]=$this->categories_model->get_count_categories();
 		$this->load->view('categories/index.php',$data);
 		$this->load->view("cssjs");
 	}
@@ -22,6 +23,12 @@ class Categories extends CI_Controller {
 		$data["query"]=$this->categories_model->get_categories();
 		$this->load->view("categories/categories_list",$data);
 		$this->load->view("cssjs");
+	}
+	
+	public function insert_Categories(){
+		$this->load->model("categories_model");
+		$data["result"]=$this->categories_model->insert_categories();
+		$this->load->view("categories/categories_insert",$data);
 	}
 }
 ?>

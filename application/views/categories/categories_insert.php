@@ -62,35 +62,17 @@
     </div>
 
     <div class="container theme-showcase" role="main">
+	
+		<?php 
+			 if($result==1){
+			 	echo "<div class='alert alert-success'><strong>Agregado!</strong> La categoría se a agregado con éxito.</div>";
+			 }else{
+			 	echo "<div class='alert alert-danger'><strong>Hubo un error!</strong> La categoría no se agrego correctamente.</div>";
+			 }
+		?>
 
-      <!-- Main jumbotron for a primary marketing message or call to action -->
-      <div class="jumbotron">
-        <h1>Administración de categorías!</h1>
-        <p>Aquí se podrán administrar las categorías.</p>
-      </div>
-	<button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#addCategorie">
-		<span class="glyphicon glyphicon-plus-sign"> </span> Agregar
-	</button>
-	<br/>
-	<br/>
-	<table class="table table-bordered">
-		<thead>
-			<tr><th>Nombre</th><th>Descripción</th><th>Editar</th><th>Eliminar</th></tr>
-		</thead>
-		<tbody>
-			<?php
-				foreach($query as $row){
-					echo "<tr><td>".$row->nombre."</td><td>".$row->descripcion."</td><td><a href='editar/' class='btn btn-warning'>Editar</a></td><td><a href='eliminar/' class='btn btn-danger'>Eliminar</a></td></tr>";
-				}
-			?>
-		</tbody>
-		<tfoot>
-			<tr><td>Nombre</td><td>Descripción</td><td>Editar</td><td>Eliminar</td></tr>
-		</tfoot>
-	</table>
-		<p>Total de registros: <strong><?php echo $nRows; ?></strong></p>
 	   <div class="back-leyend">
-	        <a href="/panel/"><span class="glyphicon glyphicon-chevron-left"> </span> Regresar</a>
+	        <a href="/categories/"><span class="glyphicon glyphicon-chevron-left"> </span> Regresar</a>
        </div>
        <center><span class="copy">&copy; Copyright 2014. Powered by: <strong><a href="http://www.kidztartdev.com.mx" target="_blank">KidztartDev</a></strong></span></center>
       
@@ -99,34 +81,3 @@
   </body>
   
   
-  <!-- Modal para agregar categorías -->
-<div class="modal fade" id="addCategorie" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-    	 <form class="form-horizontal" method="post" name="" id="" action="/categories/insert_Categories/">
-      		<div class="modal-header">
-      			  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-			      <h4 class="modal-title" id="myModalLabel">Agregar categoría</h4>
-		     </div>
-		      <div class="modal-body">
-        			<div class="form-group">
-        				<label for="nombre" class="col-sm-2 control-label">Nombre</label>
-        				<div class="col-sm-6">
-	        				<input type="text" id="nombre" class="form-control" name="nombre" placeholder="Escribe el nombre" required="required"/>
-	        			</div>
-    	    		</div>
-    	    		<div class="form-group">
-        				<label for="descripcion" class="col-sm-2 control-label">Descripción</label>
-        				<div class="col-sm-6">
-	        				<textarea id="descripcion" class="form-control" name="descripcion" placeholder="Escribe la descripcion" required="required"></textarea>
-	        			</div>
-    	    		</div>
-		      </div>
-		      <div class="modal-footer">
-			        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-			        <button type="submit" class="btn btn-primary">Guardar</button>
-		      </div>
-	      </form>
-    </div>
-  </div>
-</div>
