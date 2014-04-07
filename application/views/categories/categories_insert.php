@@ -60,14 +60,20 @@
         </div><!--/.nav-collapse -->
       </div>
     </div>
-
+</br>
+</br>
+</br>
+</br>
     <div class="container theme-showcase" role="main">
 	
 		<?php 
 			 if($result==1){
 			 	echo "<div class='alert alert-success'><strong>Agregado!</strong> La categoría se a agregado con éxito.</div>";
 			 }else{
-			 	echo "<div class='alert alert-danger'><strong>Hubo un error!</strong> La categoría no se agrego correctamente.</div>";
+			 	echo "<div class='alert alert-warning'><strong>Hubo un error!</strong> La categoría no se agrego correctamente.</div>";
+			 	if(isset($errores)){
+			 		echo "<div class='alert alert-danger'><strong>El error al subir la imagen:</strong><pre>".var_dump($errores)."</pre></div>";
+			 	}
 			 }
 		?>
 

@@ -75,17 +75,17 @@
 	<br/>
 	<table class="table table-bordered">
 		<thead>
-			<tr><th>Nombre</th><th>Descripción</th><th>Editar</th><th>Eliminar</th></tr>
+			<tr><th>Nombre</th><th>Descripción</th><th>Imagen</th><th>Editar</th><th>Eliminar</th></tr>
 		</thead>
 		<tbody>
 			<?php
 				foreach($query as $row){
-					echo "<tr><td>".$row->nombre."</td><td>".$row->descripcion."</td><td><a href='editar/' class='btn btn-warning'>Editar</a></td><td><a href='eliminar/' class='btn btn-danger'>Eliminar</a></td></tr>";
+					echo "<tr><td>".$row->nombre."</td><td>".$row->descripcion."</td><td><img src='/img/categorias/".$row->imagen."' width='100px' alt='Categoria' /></td><td><a href='editar/' class='btn btn-warning'>Editar</a></td><td><a href='eliminar/' class='btn btn-danger'>Eliminar</a></td></tr>";
 				}
 			?>
 		</tbody>
 		<tfoot>
-			<tr><td>Nombre</td><td>Descripción</td><td>Editar</td><td>Eliminar</td></tr>
+			<tr><td>Nombre</td><td>Descripción</td><td>Imagen</td><td>Editar</td><td>Eliminar</td></tr>
 		</tfoot>
 	</table>
 		<p>Total de registros: <strong><?php echo $nRows; ?></strong></p>
@@ -103,7 +103,7 @@
 <div class="modal fade" id="addCategorie" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
-    	 <form class="form-horizontal" method="post" name="" id="" action="/categories/insert_Categories/">
+    	 <form class="form-horizontal" method="post" name="" id="" action="/categories/insert_Categories/" enctype="multipart/form-data">
       		<div class="modal-header">
       			  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 			      <h4 class="modal-title" id="myModalLabel">Agregar categoría</h4>
@@ -118,7 +118,13 @@
     	    		<div class="form-group">
         				<label for="descripcion" class="col-sm-2 control-label">Descripción</label>
         				<div class="col-sm-6">
-	        				<textarea id="descripcion" class="form-control" name="descripcion" placeholder="Escribe la descripcion" required="required"></textarea>
+	        				<textarea id="descripcion" class="form-control" rows="10" name="descripcion" placeholder="Escribe la descripcion" required="required"></textarea>
+	        			</div>
+    	    		</div>
+    	    		<div class="form-group">
+        				<label for="imagen" class="col-sm-2 control-label">Imagen</label>
+        				<div class="col-sm-6">
+	        				<input type="file" name="imagen" id="imagen" class="form-control"/>
 	        			</div>
     	    		</div>
 		      </div>

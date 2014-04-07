@@ -20,8 +20,8 @@ class Categories_model extends CI_Model {
 		return $this->db->count_all('categorias');
 	}
 	
-	function insert_categories(){
-		$data = array('nombre' => $this->input->post("nombre"),'descripcion' => $this->input->post("descripcion"));
+	function insert_categories($titulo,$descripcion,$imagen=""){
+		$data = array('nombre' => $titulo,'descripcion' => $descripcion,'imagen'=> $imagen);
 		$this->db->insert('categorias', $data); 	
 		return $this->db->affected_rows();
 	}
